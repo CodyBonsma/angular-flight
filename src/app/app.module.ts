@@ -4,6 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { FlightsComponent } from './flights/flights.component';
+import { HttpClientModule } from '@angular/common/http';
 
 const routes: Routes = [
   {path: "flights", component: FlightsComponent},
@@ -17,7 +18,8 @@ const routes: Routes = [
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
